@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+body, table {
+  font: 300 16px/140% 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #121214;
+  color: white;
+}
+
+.container{
+  max-width: 690px;
+  margin: 0 auto;
+  padding: 20px 32px;
+}
+
+header {
+  padding: 20px 0;
+}
+
+form {
+  border: var(--border);
+  border-inline: none;
+  padding: 20px 0;
+}
+
+fieldset{
+  border: none;
+  padding: 0;
+}
+
+fieldset > div {
+  display:flex;
+  gap: 12px;
+}
+
+.input-wrapper{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 45px;
+
+  border: var(--border);
+  border-radius: 8px;
+
+  padding: 8px 12px;
+
+  font: 400 14px/150% 'Roboto', sans-serif;
+  color: #c4c4cc;
+}
+
+input{
+  all: unset;
+}
+
+fieldset legend, section h2 {
+  font: 700 18px/150% 'Roboto', sans-serif;
+  color: #e1e1e6;
+  padding-bottom: 16px;
+}
+
+fieldset button{
+  width: fit-content;
+  border: 0;
+  background: #9bcec5;
+  border-radius: 8px;
+  padding: 7px 20px;
+
+  font: 700 12px/24px 'Roboto', sans-serif;
+  color: #121214;
+}
+
+fieldset button:hover {
+  background: #75b4a9;
+}
+
+.lista-participantes {
+  padding: 20px 0;
+}
+
+.lista-participantes > div {
+  border: var(--border);
+  border-radius: 8px;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+table thead{
+  font-size: 16px;
+  line-height: 12px;
+}
+
+thead th, 
+tbody td{
+  padding: 16px 24px;
+}
+
+/* Borda(linha) separador participantes */
+tbody td{
+  border-top: var(--border);
+  font-size: 16px;
+  line-height: 20px;
+  color: #c4c4cc;
+}
+
+/* Nome */
+tbody td strong{
+  color: #e6dede;
+  font-size: 17px;
+  line-height: 14px;
+  font-weight: 600;
+}
+/* Email */ 
+tbody td small{
+  font-size: 12px;
+  line-height: 22px;
+}
+/* Check-in botão */
+tbody td button{
+  all: unset;
+  color: rgb(163, 236, 212);
+}
+/* Hover do botão */
+tbody td button:hover{
+  text-decoration: underline;
+}
