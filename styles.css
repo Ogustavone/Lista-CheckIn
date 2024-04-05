@@ -6,6 +6,22 @@
 
 :root{
   --border: 1px solid rgba(255, 255, 255, 0.25);
+  --button-line: rgb(163, 236, 212);
+  --fundo: #121214;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--fundo); 
+}
+::-webkit-scrollbar-thumb {
+  background: #3d3b3b;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #252525;
 }
 
 body, table {
@@ -13,7 +29,7 @@ body, table {
 }
 
 body {
-  background-color: #121214;
+  background-color: var(--fundo);
   color: white;
 }
 
@@ -72,16 +88,17 @@ fieldset legend, section h2 {
 fieldset button{
   width: fit-content;
   border: 0;
-  background: #9bcec5;
+  background: rgb(155, 206, 197);
+  transition:ease-in 700ms;
   border-radius: 8px;
-  padding: 0 20px;
+  padding: 7px 20px;
 
   font: 700 12px/24px 'Roboto', sans-serif;
   color: #121214;
 }
 
 fieldset button:hover {
-  background: #75b4a9;
+  background: #54c5b2;
 }
 
 .lista-participantes {
@@ -130,9 +147,11 @@ tbody td small{
 /* Check-in botão */
 tbody td button{
   all: unset;
-  color: rgb(163, 236, 212);
+  color: var(--button-line);
+  border-bottom: 1px solid rgb(163, 236, 212, 0);
+  transition: all 700ms;
 }
 /* Hover do botão */
 tbody td button:hover{
-  text-decoration: underline;
+  border-bottom: 1px solid var(--button-line);
 }
